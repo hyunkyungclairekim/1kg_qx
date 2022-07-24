@@ -1,0 +1,67 @@
+Building DAG of jobs...
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+LD_clumping              10              1              1
+all                       1              1              1
+filter_1kg_seqdata       24              1              1
+total                    35              1              1
+
+
+[Thu Jul 21 12:55:51 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4849_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 56
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped_transformed_rsID.txt; Set of input files has changed since last execution
+    wildcards: code=4849
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl data/sib_gwas/filtered/ieu-b-4849_highfrq.txt > data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped.txt
+        awk -F'[ :	]' '{print $1,$2,$3,$4,$5,$11,$12,$13,$14}' data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped.txt > data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped_transformed.txt
+        awk '{print $3}' data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped_transformed.txt > data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped_transformed_rsID.txt
+        
+
+[Thu Jul 21 12:55:51 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage.bed
+    jobid: 70
+    reason: Missing output files: data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage.bed
+    wildcards: code=4859
+    resources: tmpdir=/tmp
+
+
+    	plink --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms --extract data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt --make-bed --out data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage
+        
+
+[Thu Jul 21 12:55:51 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4819_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 11
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped_transformed_rsID.txt; Set of input files has changed since last execution
+    wildcards: code=4819
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl data/sib_gwas/filtered/ieu-b-4819_highfrq.txt > data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped.txt
+        awk -F'[ :	]' '{print $1,$2,$3,$4,$5,$11,$12,$13,$14}' data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped.txt > data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped_transformed.txt
+        awk '{print $3}' data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped_transformed.txt > data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped_transformed_rsID.txt
+        
+
+[Thu Jul 21 12:55:51 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.bed
+    jobid: 25
+    reason: Missing output files: data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.bed
+    wildcards: code=4829
+    resources: tmpdir=/tmp
+
+
+    	plink --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms --extract data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt --make-bed --out data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage
+        
+
+[Thu Jul 21 12:55:51 2022]

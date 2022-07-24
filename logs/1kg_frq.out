@@ -1,0 +1,260 @@
+SLURM_JOBID=21748930
+CHR = []
+for i in range(1,23):
+    CHR.append(str(i))
+print(CHR)
+
+#CODE = [str(4815)]
+CODE = []
+for i in range(2406,2430):
+    CODE.append(str(2*i+1))
+print(CODE)
+
+# dry-run vs. actual run???
+
+
+rule all: ## output you want / how to list several things?
+    input:
+        expand("data/1kg_prs/b-{code}/ieu-b-{code}_1kg_dosage.bed", chr=CHR, code=CODE)
+
+
+rule compute_freqs:
+    input: ### what if input != output from prev func
+        vcf="/project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr{chr}.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz",
+        id="/project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt"
+    output:
+        "data/1kg_frq/1kg_old_build37/1kg_chr{chr}_high_frq.txt"
+    shell:
+        """
+    	plink --vcf {input.vcf} --freq --snps-only --rm-dup --keep {input.id} --out data/1kg_frq/1kg_old_build37/chr{wildcards.chr}
+            awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr{wildcards.chr}.frq > {output}
+    	rm data/1kg_frq/1kg_old_build37/chr{wildcards.chr}.*
+    	"""
+
+rule filter_gwas:
+    input:
+        vcf="data/sib_gwas/ieu-b-{code}.vcf",
+        perl="/project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl" ## ???? see if this works
+    output:
+        "data/sib_gwas/filtered/ieu-b-{code}_highfrq.txt"
+    shell:
+        """
+    	perl {input.perl} {input.vcf} > {output}
+    	"""
+
+rule LD_clumping:
+    input:
+        vcf="data/sib_gwas/filtered/ieu-b-{code}_highfrq.txt",
+        perl="/project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl"
+    output:
+        file="data/sib_gwas/filtered/ieu-b-{code}_highfrq_LDclumped.txt",
+        trns="data/sib_gwas/filtered/ieu-b-{code}_highfrq_LDclumped_transformed.txt",
+        fltr="data/sib_gwas/filtered/ieu-b-{code}_highfrq_LDclumped_transformed_pvalfiltered.txt",
+        id="data/sib_gwas/filtered/ieu-b-{code}_highfrq_LDclumped_transformed_rsID.txt"
+    shell:
+        """
+    	perl {input.perl} {input.vcf} > {output.file}
+        awk -F'[ :\t]' '{{print $1,$2,$3,$4,$5,$11,$12,$13,$14}}' {output.file} > {output.trns}
+        sed -i '1s/#CHROM POS ID REF ALT/CHROM POS ID REF ALT ES SE LP SS/g' {output.trns}
+        awk '$8 < 0.05 || $5 == "ALT"' {output.trns} > {output.fltr}
+        awk '{{print $3}}' {output.fltr} > {output.id}
+        """
+
+rule filter_1kg_seqdata: ##???
+    input:
+        bfile="/project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed",
+        id="data/sib_gwas/filtered/ieu-b-{code}_highfrq_LDclumped_transformed_rsID.txt"
+    output:
+        "data/1kg_prs/b-{code}/ieu-b-{code}_1kg_dosage.bed"
+    shell:
+        """
+    	plink --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms --extract {input.id} --make-bed --out data/1kg_prs/b-{wildcards.code}/ieu-b-{wildcards.code}_1kg_dosage
+        """
+PLINK v1.90b6.25 64-bit (5 Mar 2022)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage.log.
+Options in effect:
+  --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms
+  --extract data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_rsID.txt
+  --make-bed
+  --out data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage
+
+63728 MB RAM detected; reserving 31864 MB for main workspace.
+81271745 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage.nosex .
+--extract: 1682 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 503 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%PLINK v1.90b6.25 64-bit (5 Mar 2022)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage.log.
+Options in effect:
+  --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms
+  --extract data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_rsID.txt
+  --make-bed
+  --out data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage
+
+63728 MB RAM detected; reserving 31864 MB for main workspace.
+81271745 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage.nosex .
+--extract: 1690 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 503 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%PLINK v1.90b6.25 64-bit (5 Mar 2022)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.log.
+Options in effect:
+  --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms
+  --extract data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_rsID.txt
+  --make-bed
+  --out data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage
+
+63728 MB RAM detected; reserving 31864 MB for main workspace.
+81271745 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.nosex .
+--extract: 1689 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 503 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%PLINK v1.90b6.25 64-bit (5 Mar 2022)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to data/1kg_prs/b-4841/ieu-b-4841_1kg_dosage.log.
+Options in effect:
+  --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms
+  --extract data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_rsID.txt
+  --make-bed
+  --out data/1kg_prs/b-4841/ieu-b-4841_1kg_dosage
+
+63728 MB RAM detected; reserving 31864 MB for main workspace.
+81271745 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to data/1kg_prs/b-4841/ieu-b-4841_1kg_dosage.nosex .
+--extract: 1679 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 503 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%PLINK v1.90b6.25 64-bit (5 Mar 2022)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage.log.
+Options in effect:
+  --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms
+  --extract data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_rsID.txt
+  --make-bed
+  --out data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage
+
+63728 MB RAM detected; reserving 31864 MB for main workspace.
+81271745 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage.nosex .
+--extract: 1684 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 503 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%1%1%1%1%2%2%2%2%2%3%3%3%3%PLINK v1.90b6.25 64-bit (5 Mar 2022)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.log.
+Options in effect:
+  --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms
+  --extract data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt
+  --make-bed
+  --out data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage
+
+63728 MB RAM detected; reserving 31864 MB for main workspace.
+81271745 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.nosex .
+--extract: 1686 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 503 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%3%1%2%4%4%4%4%4%3%5%5%5%5%5%4%5%6%6%6%6%6%6%7%7%7%7%7%7%8%8%8%8%8%8%9%9%9%9%9%9%10%10%10%10%10%10%11%11%11%11%11%11%12%12%12%12%12%12%13%13%13%13%13%13%14%14%14%14%14%14%15%15%15%15%15%15%16%16%16%16%16%16%17%17%17%17%17%17%18%18%18%18%18%18%19%19%19%19%19%19%20%20%20%20%20%20%21%21%21%21%21%21%22%22%22%22%22%22%23%23%23%23%23%23%24%24%24%24%24%24%25%25%25%25%25%25%26%26%26%26%26%26%27%27%27%27%27%27%28%28%28%28%28%28%29%29%29%29%29%29%30%30%30%30%30%30%31%31%31%31%31%31%32%32%32%32%32%32%33%33%33%33%33%33%34%34%34%34%34%34%35%35%35%35%35%35%36%36%36%36%36%36%37%37%37%37%37%37%38%38%38%38%38%38%39%39%39%39%39%39%40%40%40%40%40%40%41%41%41%41%41%41%42%42%42%42%42%42%43%43%43%43%43%43%44%44%44%44%44%44%45%45%45%45%45%45%PLINK v1.90b6.25 64-bit (5 Mar 2022)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to data/1kg_prs/b-4819/ieu-b-4819_1kg_dosage.log.
+Options in effect:
+  --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms
+  --extract data/sib_gwas/filtered/ieu-b-4819_highfrq_LDclumped_transformed_rsID.txt
+  --make-bed
+  --out data/1kg_prs/b-4819/ieu-b-4819_1kg_dosage
+
+63728 MB RAM detected; reserving 31864 MB for main workspace.
+Allocated 17923 MB successfully, after larger attempt(s) failed.
+81271745 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to data/1kg_prs/b-4819/ieu-b-4819_1kg_dosage.nosex .
+--extract: 1694 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 503 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%46%46%46%46%46%46%2%3%4%47%47%47%47%47%47%5%48%48%48%6%48%48%48%7%8%49%49%49%49%9%49%49%10%11%50%50%50%50%50%50%12%13%51%51%14%51%51%51%51%15%16%52%52%52%52%17%52%52%18%19%53%53%53%53%20%53%53%21%54%54%54%22%54%54%54%23%24%55%55%55%25%55%55%55%26%27%56%28%56%56%56%56%56%29%PLINK v1.90b6.25 64-bit (5 Mar 2022)           www.cog-genomics.org/plink/1.9/
+(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to data/1kg_prs/b-4813/ieu-b-4813_1kg_dosage.log.
+Options in effect:
+  --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms
+  --extract data/sib_gwas/filtered/ieu-b-4813_highfrq_LDclumped_transformed_rsID.txt
+  --make-bed
+  --out data/1kg_prs/b-4813/ieu-b-4813_1kg_dosage
+
+63728 MB RAM detected; reserving 31864 MB for main workspace.
+Allocated 17923 MB successfully, after larger attempt(s) failed.
+81271745 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to data/1kg_prs/b-4813/ieu-b-4813_1kg_dosage.nosex .
+--extract: 1684 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 503 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%30%1%31%57%57%57%57%57%57%2%32%58%58%33%58%34%58%3%58%58%35%4%36%5%59%59%59%37%6%59%38%39%59%59%40%60%7%60%41%60%60%8%60%60%42%9%43%61%61%61%10%61%61%44%61%45%11%46%62%62%12%47%13%62%62%62%62%48%14%49%63%63%63%50%63%63%63%51%15%64%52%64%64%16%64%53%64%64%54%17%18%19%55%65%65%65%65%20%65%65%56%21%57%58%66%66%22%59%66%66%23%66%66%24%67%25%67%67%67%26%67%67%60%27%61%28%68%68%29%62%68%68%68%68%30%63%64%69%69%69%69%65%69%69%66%70%70%70%31%70%70%70%32%67%33%71%68%34%71%71%71%71%71%69%35%36%70%37%72%72%38%71%72%72%72%72%72%39%73%40%73%73%73%73%73%73%41%42%43%74%44%74%74%74%74%74%45%74%46%75%75%75%75%75%47%75%75%48%49%76%50%51%76%76%76%76%76%76%52%53%54%77%77%55%77%77%56%77%77%57%77%58%78%59%78%78%78%78%78%78%60%61%79%79%62%79%79%79%79%79%63%64%65%80%80%80%80%80%80%80%66%67%81%68%81%81%81%81%81%81%69%70%82%82%82%82%71%82%82%82%72%73%83%74%83%83%83%83%83%83%75%76%77%78%79%84%84%84%84%84%84%80%84%81%85%85%85%82%85%85%85%83%85%84%86%86%85%86%86%86%86%86%86%87%87%87%87%87%87%87%87%88%88%88%88%88%88%88%88%89%89%89%89%89%89%89%89%90%90%90%90%90%90%90%90%91%91%91%91%91%91%91%91%92%92%92%92%92%92%92%92%93%93%93%93%93%93%93%93%94%94%94%94%94%94%94%94%95%95%95%95%95%95%95%95%96%96%96%96%96%96%96%96%97%97%97%97%97%97%97%97%98%98%98%98%98%98%98%98%99%99%99%99%99%99%99%99% done.
+Total genotyping rate is 0.99987.
+1682 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+ done.
+Total genotyping rate is 0.99995.
+1684 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+ done.
+Total genotyping rate is 0.999999.
+1689 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage.bed +
+data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage.bim +
+data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage.fam ... 0%1%--make-bed to data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.bed +
+data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.bim +
+data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.fam ... 0%1%--make-bed to data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage.bed +
+data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage.bim +
+data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage.fam ... 0%1%2%2%2%3%3%3%4%4%5%4%5%6%6%5%7%7%6%8%8%9%9% done.
+Total genotyping rate is 0.999916.
+1690 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+ done.
+Total genotyping rate is 0.999996.
+1686 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+ done.
+Total genotyping rate is 0.999993.
+1679 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+ done.
+Total genotyping rate is in [0.9999995, 1).
+1694 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+ done.
+Total genotyping rate is 0.999936.
+1684 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage.bed +
+data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage.bim +
+data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage.fam ... 0%1%--make-bed to data/1kg_prs/b-4813/ieu-b-4813_1kg_dosage.bed +
+data/1kg_prs/b-4813/ieu-b-4813_1kg_dosage.bim +
+data/1kg_prs/b-4813/ieu-b-4813_1kg_dosage.fam ... 0%1%--make-bed to data/1kg_prs/b-4841/ieu-b-4841_1kg_dosage.bed +
+data/1kg_prs/b-4841/ieu-b-4841_1kg_dosage.bim +
+data/1kg_prs/b-4841/ieu-b-4841_1kg_dosage.fam ... 0%1%--make-bed to data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.bed +
+data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.bim +
+data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.fam ... 0%1%10%10%7%--make-bed to data/1kg_prs/b-4819/ieu-b-4819_1kg_dosage.bed +
+data/1kg_prs/b-4819/ieu-b-4819_1kg_dosage.bim +
+data/1kg_prs/b-4819/ieu-b-4819_1kg_dosage.fam ... 0%1%2%2%2%11%3%11%3%3%2%4%2%4%3%12%12%4%5%5%4%5%3%6%8%6%5%6%7%13%4%6%13%7%7%8%7%5%8%8%14%14%8%9%9%9%9%15%15%10%10%9%10%10%11%6%11%11%10%11%16%16%12%7%12%12%12%8%13%13%17%17%13%13%14%11%14%14%9%14%18%12%15%18%15%15%15%10%16%16%16%13%19%19%16%17%17%17%11%17%18%20%20%18%18%18%14%19%12%19%19%19%15%20%21%13%21%20%20%20%21%21%21%21%22%14%22%16%22%22%22%22%17%15%23%23%23%23%23%23%16%24%24%24%18%24%24%24%19%25%25%25%25%17%25%25%20%26%26%26%26%18%26%26%21%27%19%27%27%27%27%27%22%20%28%28%23%28%28%28%28%21%29%29%29%29%29%29%24%22%30%30%30%30%30%30%25%23%31%31%31%31%24%31%31%26%25%32%32%32%32%26%32%27%32%28%27%28%33%33%33%29%33%33%33%29%34%34%34%30%34%34%30%34%31%35%35%35%35%35%35%31%32%32%33%36%36%36%36%36%36%34%33%37%37%37%37%37%37%34%35%35%36%38%38%38%38%38%38%36%37%37%39%39%39%39%39%38%39%39%40%40%38%40%40%40%40%40%39%40%41%41%41%41%41%41%41%41%42%42%42%42%42%42%42%42%43%43%43%43%43%43%43%43%44%44%44%44%44%44%44%44%45%45%45%45%45%45%45%45%46%46%46%46%46%46%46%46%47%47%47%47%47%47%47%47%48%48%48%48%48%48%48%48%49%49%49%49%49%49%49%49%50%50%50%50%50%50%50%50%51%51%51%51%51%51%51%51%52%52%52%52%52%52%52%52%53%53%53%53%53%53%53%53%54%54%54%54%54%54%54%54%55%55%55%55%55%55%55%55%56%56%56%56%56%56%56%56%57%57%57%57%57%57%57%57%58%58%58%58%58%58%58%58%59%59%59%59%59%59%59%59%60%60%60%60%60%60%60%60%61%61%61%61%61%61%61%61%62%62%62%62%62%62%62%62%63%63%63%63%63%63%63%63%64%64%64%64%64%64%64%64%65%65%65%65%65%65%65%65%66%66%66%66%66%66%66%66%67%67%67%67%67%67%67%67%68%68%68%68%68%68%68%68%69%69%69%69%69%69%69%69%70%70%70%70%70%70%70%70%71%71%71%71%71%71%71%71%72%72%72%72%72%72%72%72%73%73%73%73%73%73%73%73%74%74%74%74%74%74%74%74%75%75%75%75%75%75%75%75%76%76%76%76%76%76%76%76%77%77%77%77%77%77%77%77%78%78%78%78%78%78%78%78%79%79%79%79%79%79%79%79%80%80%80%80%80%80%80%80%81%81%81%81%81%81%81%81%82%82%82%82%82%82%82%82%83%83%83%83%83%83%83%83%84%84%84%84%84%84%84%84%85%85%85%85%85%85%85%85%86%86%86%86%86%86%86%86%87%87%87%87%87%87%87%87%88%88%88%88%88%88%88%88%89%89%89%89%89%89%89%89%90%90%90%90%90%90%90%90%91%91%91%91%91%91%91%91%92%92%92%92%92%92%92%92%93%93%93%93%93%93%93%93%94%94%94%94%94%94%94%94%95%95%95%95%95%95%95%95%96%96%96%96%96%96%96%96%97%97%97%97%97%97%97%97%98%98%98%98%98%98%98%98%99%99%99%99%99%99%99%99%done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']
+['4813', '4815', '4817', '4819', '4821', '4823', '4825', '4827', '4829', '4831', '4833', '4835', '4837', '4839', '4841', '4843', '4845', '4847', '4849', '4851', '4853', '4855', '4857', '4859']

@@ -1,0 +1,43 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 14
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+LD_clumping               3              1              1
+all                       1              1              1
+filter_1kg_seqdata        3              1              1
+total                     7              1              1
+
+Select jobs to execute...
+
+[Thu Jul 14 12:41:33 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4855_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 65
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4855
+    resources: tmpdir=/tmp/jobs/21628208
+
+
+[Thu Jul 14 12:41:33 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4853_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 62
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4853
+    resources: tmpdir=/tmp/jobs/21628208
+
+
+[Thu Jul 14 12:41:33 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4841_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 44
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4841
+    resources: tmpdir=/tmp/jobs/21628208
+

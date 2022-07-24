@@ -1,0 +1,240 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 14
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+LD_clumping              24              1              1
+all                       1              1              1
+filter_1kg_seqdata       24              1              1
+total                    49              1              1
+
+Select jobs to execute...
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4827_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 23
+    reason: Code has changed since last execution
+    wildcards: code=4827
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4855_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 65
+    reason: Code has changed since last execution
+    wildcards: code=4855
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4821_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 14
+    reason: Code has changed since last execution
+    wildcards: code=4821
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4847_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 53
+    reason: Code has changed since last execution
+    wildcards: code=4847
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4841_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 44
+    reason: Code has changed since last execution
+    wildcards: code=4841
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4839_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 41
+    reason: Code has changed since last execution
+    wildcards: code=4839
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4833_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 32
+    reason: Code has changed since last execution
+    wildcards: code=4833
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4853_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 62
+    reason: Code has changed since last execution
+    wildcards: code=4853
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4817_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 8
+    reason: Code has changed since last execution
+    wildcards: code=4817
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4859_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 71
+    reason: Code has changed since last execution
+    wildcards: code=4859
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4829_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 26
+    reason: Code has changed since last execution
+    wildcards: code=4829
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4857_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 68
+    reason: Code has changed since last execution
+    wildcards: code=4857
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4851_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 59
+    reason: Code has changed since last execution
+    wildcards: code=4851
+    resources: tmpdir=/tmp/jobs/21743135
+
+
+[Fri Jul 22 13:40:08 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4843_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping_v2.pl
+    output: data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 47
+    reason: Code has changed since last execution
+    wildcards: code=4843
+    resources: tmpdir=/tmp/jobs/21743135
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 14
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 32
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 53
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 41
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 26
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 71
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 68
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 8
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 59
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 23
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 44
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 65
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 47
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed_rsID.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed.txt completed successfully, but some output files are missing. 62
+Removing output files of failed job LD_clumping since they might be corrupted:
+data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_pvalfiltered.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2022-07-22T134004.682756.snakemake.log

@@ -1,0 +1,7 @@
+Building DAG of jobs...
+MissingInputException in line 58 of /project2/jjberg/hkim/1kg_qx/snakefile:
+Missing input files for rule filter_1kg_seqdata:
+    output: data/1kg_prs/b-4815/ieu-b-4815_1kg_dosage.bed
+    wildcards: code=4815
+    affected files:
+        /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms

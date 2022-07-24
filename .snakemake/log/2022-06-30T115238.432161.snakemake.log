@@ -1,0 +1,323 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 14
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+all                  1              1              1
+compute_freqs       22              1              1
+total               23              1              1
+
+Select jobs to execute...
+
+[Thu Jun 30 11:52:42 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr9.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr9_high_frq.txt
+    jobid: 9
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr9_high_frq.txt
+    wildcards: chr=9
+    resources: tmpdir=/tmp/jobs/21280986
+
+
+[Thu Jun 30 11:52:42 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr14.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr14_high_frq.txt
+    jobid: 14
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr14_high_frq.txt
+    wildcards: chr=14
+    resources: tmpdir=/tmp/jobs/21280986
+
+
+[Thu Jun 30 11:52:43 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr11.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr11_high_frq.txt
+    jobid: 11
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr11_high_frq.txt
+    wildcards: chr=11
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:43 2022]
+Error in rule compute_freqs:
+    jobid: 9
+    output: data/1kg_frq/1kg_old_build37/1kg_chr9_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr9.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr9
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr9.frq > data/1kg_frq/1kg_old_build37/1kg_chr9_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr9.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Thu Jun 30 11:52:44 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr4.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr4_high_frq.txt
+    jobid: 4
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr4_high_frq.txt
+    wildcards: chr=4
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:44 2022]
+Error in rule compute_freqs:
+    jobid: 14
+    output: data/1kg_frq/1kg_old_build37/1kg_chr14_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr14.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr14
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr14.frq > data/1kg_frq/1kg_old_build37/1kg_chr14_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr14.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Jun 30 11:52:44 2022]
+Error in rule compute_freqs:
+    jobid: 11
+    output: data/1kg_frq/1kg_old_build37/1kg_chr11_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr11.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr11
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr11.frq > data/1kg_frq/1kg_old_build37/1kg_chr11_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr11.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Thu Jun 30 11:52:44 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr13.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr13_high_frq.txt
+    jobid: 13
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr13_high_frq.txt
+    wildcards: chr=13
+    resources: tmpdir=/tmp/jobs/21280986
+
+
+[Thu Jun 30 11:52:45 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr3.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr3_high_frq.txt
+    jobid: 3
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr3_high_frq.txt
+    wildcards: chr=3
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:45 2022]
+Error in rule compute_freqs:
+    jobid: 4
+    output: data/1kg_frq/1kg_old_build37/1kg_chr4_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr4.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr4
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr4.frq > data/1kg_frq/1kg_old_build37/1kg_chr4_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr4.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Thu Jun 30 11:52:46 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr6.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr6_high_frq.txt
+    jobid: 6
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr6_high_frq.txt
+    wildcards: chr=6
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:46 2022]
+Error in rule compute_freqs:
+    jobid: 13
+    output: data/1kg_frq/1kg_old_build37/1kg_chr13_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr13.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr13
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr13.frq > data/1kg_frq/1kg_old_build37/1kg_chr13_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr13.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Thu Jun 30 11:52:46 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr8.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr8_high_frq.txt
+    jobid: 8
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr8_high_frq.txt
+    wildcards: chr=8
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:46 2022]
+Error in rule compute_freqs:
+    jobid: 3
+    output: data/1kg_frq/1kg_old_build37/1kg_chr3_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr3.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr3
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr3.frq > data/1kg_frq/1kg_old_build37/1kg_chr3_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr3.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Jun 30 11:52:46 2022]
+Error in rule compute_freqs:
+    jobid: 6
+    output: data/1kg_frq/1kg_old_build37/1kg_chr6_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr6.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr6
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr6.frq > data/1kg_frq/1kg_old_build37/1kg_chr6_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr6.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Thu Jun 30 11:52:47 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr10.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr10_high_frq.txt
+    jobid: 10
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr10_high_frq.txt
+    wildcards: chr=10
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:47 2022]
+Error in rule compute_freqs:
+    jobid: 8
+    output: data/1kg_frq/1kg_old_build37/1kg_chr8_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr8.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr8
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr8.frq > data/1kg_frq/1kg_old_build37/1kg_chr8_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr8.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Thu Jun 30 11:52:47 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr2.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr2_high_frq.txt
+    jobid: 2
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr2_high_frq.txt
+    wildcards: chr=2
+    resources: tmpdir=/tmp/jobs/21280986
+
+
+[Thu Jun 30 11:52:47 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr12.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr12_high_frq.txt
+    jobid: 12
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr12_high_frq.txt
+    wildcards: chr=12
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:47 2022]
+Error in rule compute_freqs:
+    jobid: 10
+    output: data/1kg_frq/1kg_old_build37/1kg_chr10_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr10.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr10
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr10.frq > data/1kg_frq/1kg_old_build37/1kg_chr10_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr10.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Thu Jun 30 11:52:47 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr1_high_frq.txt
+    jobid: 1
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr1_high_frq.txt
+    wildcards: chr=1
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:47 2022]
+Error in rule compute_freqs:
+    jobid: 2
+    output: data/1kg_frq/1kg_old_build37/1kg_chr2_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr2.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr2
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr2.frq > data/1kg_frq/1kg_old_build37/1kg_chr2_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr2.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Jun 30 11:52:48 2022]
+Error in rule compute_freqs:
+    jobid: 12
+    output: data/1kg_frq/1kg_old_build37/1kg_chr12_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr12.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr12
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr12.frq > data/1kg_frq/1kg_old_build37/1kg_chr12_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr12.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Thu Jun 30 11:52:48 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr5.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr5_high_frq.txt
+    jobid: 5
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr5_high_frq.txt
+    wildcards: chr=5
+    resources: tmpdir=/tmp/jobs/21280986
+
+
+[Thu Jun 30 11:52:48 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr7.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_old_build37/1kg_chr7_high_frq.txt
+    jobid: 7
+    reason: Missing output files: data/1kg_frq/1kg_old_build37/1kg_chr7_high_frq.txt
+    wildcards: chr=7
+    resources: tmpdir=/tmp/jobs/21280986
+
+[Thu Jun 30 11:52:48 2022]
+Error in rule compute_freqs:
+    jobid: 1
+    output: data/1kg_frq/1kg_old_build37/1kg_chr1_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr1
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr1.frq > data/1kg_frq/1kg_old_build37/1kg_chr1_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr1.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Jun 30 11:52:48 2022]
+Error in rule compute_freqs:
+    jobid: 5
+    output: data/1kg_frq/1kg_old_build37/1kg_chr5_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr5.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr5
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr5.frq > data/1kg_frq/1kg_old_build37/1kg_chr5_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr5.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Jun 30 11:52:48 2022]
+Error in rule compute_freqs:
+    jobid: 7
+    output: data/1kg_frq/1kg_old_build37/1kg_chr7_high_frq.txt
+    shell:
+        
+	plink --vcf /project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr7.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --freq --snps-only --rm-dup --keep /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt --out data/1kg_frq/1kg_old_build37/chr7
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr7.frq > data/1kg_frq/1kg_old_build37/1kg_chr7_high_frq.txt
+	rm data/1kg_frq/1kg_old_build37/chr7.*
+	
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2022-06-30T115238.432161.snakemake.log

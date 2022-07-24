@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+all                  1              1              1
+compute_freqs        1              1              1
+total                2              1              1
+
+Select jobs to execute...
+
+[Thu Jun 23 16:04:06 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr1.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr1_high_frq.txt
+    jobid: 1
+    reason: Missing output files: data/1kg_frq/1kg_chr1_high_frq.txt
+    wildcards: chr=1
+    resources: tmpdir=/tmp
+
+[Thu Jun 23 16:10:55 2022]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:10:55 2022]
+localrule all:
+    input: data/1kg_frq/1kg_chr1_high_frq.txt
+    jobid: 0
+    reason: Input files updated by another job: data/1kg_frq/1kg_chr1_high_frq.txt
+    resources: tmpdir=/tmp
+
+[Thu Jun 23 16:10:55 2022]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2022-06-23T160405.423929.snakemake.log

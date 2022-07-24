@@ -1,0 +1,22 @@
+CHR = []
+for i in range(1,23):
+    CHR.append(str(i))
+print(CHR)
+
+rule all:
+    input: 
+        expand("data/1kg_frq/1kg_old_build37/1kg_chr{chr}_high_frq.txt", chr=CHR)
+
+rule compute_freqs:
+    input:
+        vcf="/project2/jnovembre/data/external_public/1kg_phase3/haps/ALL.chr{chr}.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz",
+        id="/project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt"
+    output:
+        "data/1kg_frq/1kg_old_build37/1kg_chr{chr}_high_frq.txt"
+    shell:
+        """
+	plink --vcf {input.vcf} --freq --snps-only --keep {input.id} --out data/1kg_frq/1kg_old_build37/chr{wildcards.chr}
+        awk '$5 >= 0.05 && $5 != "NA"' data/1kg_frq/1kg_old_build37/chr{wildcards.chr}.frq > {output}
+	rm data/1kg_frq/1kg_old_build37/chr{wildcards.chr}.*
+	"""
+

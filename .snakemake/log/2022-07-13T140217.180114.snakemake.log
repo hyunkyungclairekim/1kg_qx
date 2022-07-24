@@ -1,0 +1,320 @@
+Building DAG of jobs...
+Job stats:
+job            count    min threads    max threads
+-----------  -------  -------------  -------------
+LD_clumping       23              1              1
+all                1              1              1
+filter_gwas       23              1              1
+total             47              1              1
+
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4853.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4853_highfrq.txt
+    jobid: 42
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4853_highfrq.txt
+    wildcards: code=4853
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4853.vcf > data/sib_gwas/filtered/ieu-b-4853_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4825.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4825_highfrq.txt
+    jobid: 14
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4825_highfrq.txt
+    wildcards: code=4825
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4825.vcf > data/sib_gwas/filtered/ieu-b-4825_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4839.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4839_highfrq.txt
+    jobid: 28
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4839_highfrq.txt
+    wildcards: code=4839
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4839.vcf > data/sib_gwas/filtered/ieu-b-4839_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4829.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4829_highfrq.txt
+    jobid: 18
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4829_highfrq.txt
+    wildcards: code=4829
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4829.vcf > data/sib_gwas/filtered/ieu-b-4829_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4843.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4843_highfrq.txt
+    jobid: 32
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4843_highfrq.txt
+    wildcards: code=4843
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4843.vcf > data/sib_gwas/filtered/ieu-b-4843_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4857.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4857_highfrq.txt
+    jobid: 46
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4857_highfrq.txt
+    wildcards: code=4857
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4857.vcf > data/sib_gwas/filtered/ieu-b-4857_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4819.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4819_highfrq.txt
+    jobid: 8
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4819_highfrq.txt
+    wildcards: code=4819
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4819.vcf > data/sib_gwas/filtered/ieu-b-4819_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4833.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4833_highfrq.txt
+    jobid: 22
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4833_highfrq.txt
+    wildcards: code=4833
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4833.vcf > data/sib_gwas/filtered/ieu-b-4833_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4847.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4847_highfrq.txt
+    jobid: 36
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4847_highfrq.txt
+    wildcards: code=4847
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4847.vcf > data/sib_gwas/filtered/ieu-b-4847_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4823.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4823_highfrq.txt
+    jobid: 12
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4823_highfrq.txt
+    wildcards: code=4823
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4823.vcf > data/sib_gwas/filtered/ieu-b-4823_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4837.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4837_highfrq.txt
+    jobid: 26
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4837_highfrq.txt
+    wildcards: code=4837
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4837.vcf > data/sib_gwas/filtered/ieu-b-4837_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4851.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4851_highfrq.txt
+    jobid: 40
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4851_highfrq.txt
+    wildcards: code=4851
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4851.vcf > data/sib_gwas/filtered/ieu-b-4851_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4815.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4815_highfrq.txt
+    jobid: 4
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4815_highfrq.txt
+    wildcards: code=4815
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4815.vcf > data/sib_gwas/filtered/ieu-b-4815_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4827.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4827_highfrq.txt
+    jobid: 16
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4827_highfrq.txt
+    wildcards: code=4827
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4827.vcf > data/sib_gwas/filtered/ieu-b-4827_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4841.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4841_highfrq.txt
+    jobid: 30
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4841_highfrq.txt
+    wildcards: code=4841
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4841.vcf > data/sib_gwas/filtered/ieu-b-4841_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4855.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4855_highfrq.txt
+    jobid: 44
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4855_highfrq.txt
+    wildcards: code=4855
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4855.vcf > data/sib_gwas/filtered/ieu-b-4855_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4817.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4817_highfrq.txt
+    jobid: 6
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4817_highfrq.txt
+    wildcards: code=4817
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4817.vcf > data/sib_gwas/filtered/ieu-b-4817_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4831.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4831_highfrq.txt
+    jobid: 20
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4831_highfrq.txt
+    wildcards: code=4831
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4831.vcf > data/sib_gwas/filtered/ieu-b-4831_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4845.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4845_highfrq.txt
+    jobid: 34
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4845_highfrq.txt
+    wildcards: code=4845
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4845.vcf > data/sib_gwas/filtered/ieu-b-4845_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4859.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4859_highfrq.txt
+    jobid: 48
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4859_highfrq.txt
+    wildcards: code=4859
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4859.vcf > data/sib_gwas/filtered/ieu-b-4859_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4821.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4821_highfrq.txt
+    jobid: 10
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4821_highfrq.txt
+    wildcards: code=4821
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4821.vcf > data/sib_gwas/filtered/ieu-b-4821_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4835.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4835_highfrq.txt
+    jobid: 24
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4835_highfrq.txt
+    wildcards: code=4835
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4835.vcf > data/sib_gwas/filtered/ieu-b-4835_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4849.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4849_highfrq.txt
+    jobid: 38
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4849_highfrq.txt
+    wildcards: code=4849
+    resources: tmpdir=/tmp
+
+
+    	perl /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl data/sib_gwas/ieu-b-4849.vcf > data/sib_gwas/filtered/ieu-b-4849_highfrq.txt
+    	
+
+[Wed Jul 13 14:02:18 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4823_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4823_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4823_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4823_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 11
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4823_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4823_highfrq.txt
+    wildcards: code=4823
+    resources: tmpdir=/tmp
+
+RuleException in line 43 of /project2/jjberg/hkim/1kg_qx/snakefile:
+NameError: The name 'print $1,$2,$3,$4,$5,$11,$12,$13,$14' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

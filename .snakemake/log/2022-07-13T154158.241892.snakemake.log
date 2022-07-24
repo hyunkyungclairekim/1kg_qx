@@ -1,0 +1,659 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 14
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+LD_clumping              22              1              1
+all                       1              1              1
+filter_1kg_seqdata       22              1              1
+filter_gwas              22              1              1
+total                    67              1              1
+
+Select jobs to execute...
+
+[Wed Jul 13 15:42:00 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4817.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4817_highfrq.txt
+    jobid: 9
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4817_highfrq.txt
+    wildcards: code=4817
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:01 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4839.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4839_highfrq.txt
+    jobid: 42
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4839_highfrq.txt
+    wildcards: code=4839
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:01 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4859.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4859_highfrq.txt
+    jobid: 72
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4859_highfrq.txt
+    wildcards: code=4859
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:01 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4831.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4831_highfrq.txt
+    jobid: 30
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4831_highfrq.txt
+    wildcards: code=4831
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:01 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4829.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4829_highfrq.txt
+    jobid: 27
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4829_highfrq.txt
+    wildcards: code=4829
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:01 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4857.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4857_highfrq.txt
+    jobid: 69
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4857_highfrq.txt
+    wildcards: code=4857
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:01 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4843.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4843_highfrq.txt
+    jobid: 48
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4843_highfrq.txt
+    wildcards: code=4843
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:02 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4827.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4827_highfrq.txt
+    jobid: 24
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4827_highfrq.txt
+    wildcards: code=4827
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:02 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4855.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4855_highfrq.txt
+    jobid: 66
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4855_highfrq.txt
+    wildcards: code=4855
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:02 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4849.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4849_highfrq.txt
+    jobid: 57
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4849_highfrq.txt
+    wildcards: code=4849
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:02 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4847.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4847_highfrq.txt
+    jobid: 54
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4847_highfrq.txt
+    wildcards: code=4847
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:02 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4841.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4841_highfrq.txt
+    jobid: 45
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4841_highfrq.txt
+    wildcards: code=4841
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:02 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4833.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4833_highfrq.txt
+    jobid: 33
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4833_highfrq.txt
+    wildcards: code=4833
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:02 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4853.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4853_highfrq.txt
+    jobid: 63
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4853_highfrq.txt
+    wildcards: code=4853
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:48 2022]
+Finished job 48.
+1 of 67 steps (1%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:48 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4845.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4845_highfrq.txt
+    jobid: 51
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4845_highfrq.txt
+    wildcards: code=4845
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:49 2022]
+Finished job 27.
+2 of 67 steps (3%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:49 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4821.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4821_highfrq.txt
+    jobid: 15
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4821_highfrq.txt
+    wildcards: code=4821
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:49 2022]
+Finished job 24.
+3 of 67 steps (4%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:49 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4851.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4851_highfrq.txt
+    jobid: 60
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4851_highfrq.txt
+    wildcards: code=4851
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:49 2022]
+Finished job 33.
+4 of 67 steps (6%) done
+[Wed Jul 13 15:42:49 2022]
+Finished job 69.
+5 of 67 steps (7%) done
+[Wed Jul 13 15:42:49 2022]
+Finished job 57.
+6 of 67 steps (9%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:49 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4835.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4835_highfrq.txt
+    jobid: 36
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4835_highfrq.txt
+    wildcards: code=4835
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:49 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4823.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4823_highfrq.txt
+    jobid: 18
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4823_highfrq.txt
+    wildcards: code=4823
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:49 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4825.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4825_highfrq.txt
+    jobid: 21
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4825_highfrq.txt
+    wildcards: code=4825
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:49 2022]
+Finished job 9.
+7 of 67 steps (10%) done
+[Wed Jul 13 15:42:49 2022]
+Finished job 30.
+8 of 67 steps (12%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:49 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4837.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4837_highfrq.txt
+    jobid: 39
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4837_highfrq.txt
+    wildcards: code=4837
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:49 2022]
+rule filter_gwas:
+    input: data/sib_gwas/ieu-b-4819.vcf, /project2/jjberg/hkim/filter_sibgwas_high_freq_vars.pl
+    output: data/sib_gwas/filtered/ieu-b-4819_highfrq.txt
+    jobid: 12
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4819_highfrq.txt
+    wildcards: code=4819
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:49 2022]
+Finished job 54.
+9 of 67 steps (13%) done
+[Wed Jul 13 15:42:49 2022]
+Finished job 72.
+10 of 67 steps (15%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:49 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4827_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 23
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4827_highfrq.txt
+    wildcards: code=4827
+    resources: tmpdir=/tmp/jobs/21578373
+
+
+[Wed Jul 13 15:42:49 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4859_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 71
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4859_highfrq.txt
+    wildcards: code=4859
+    resources: tmpdir=/tmp/jobs/21578373
+
+Select jobs to execute...
+[Wed Jul 13 15:42:49 2022]
+Finished job 42.
+11 of 67 steps (16%) done
+
+[Wed Jul 13 15:42:49 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4857_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 68
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4857_highfrq.txt
+    wildcards: code=4857
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:53 2022]
+Finished job 66.
+12 of 67 steps (18%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:53 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4855_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 65
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4855_highfrq.txt
+    wildcards: code=4855
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:53 2022]
+Finished job 45.
+13 of 67 steps (19%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:53 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4841_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 44
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4841_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4841_highfrq.txt
+    wildcards: code=4841
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:42:54 2022]
+Finished job 63.
+14 of 67 steps (21%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:42:54 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4853_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 62
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4853_highfrq.txt
+    wildcards: code=4853
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:11 2022]
+Finished job 23.
+15 of 67 steps (22%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:11 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.bed
+    jobid: 22
+    reason: Missing output files: data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4827
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:11 2022]
+Finished job 68.
+16 of 67 steps (24%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:11 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4857/ieu-b-4857_1kg_dosage.bed
+    jobid: 67
+    reason: Missing output files: data/1kg_prs/b-4857/ieu-b-4857_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4857_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4857
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:12 2022]
+Finished job 71.
+17 of 67 steps (25%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:12 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage.bed
+    jobid: 70
+    reason: Missing output files: data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4859
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:31 2022]
+Finished job 12.
+18 of 67 steps (27%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:31 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4817_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 8
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4817_highfrq.txt
+    wildcards: code=4817
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:33 2022]
+Finished job 39.
+19 of 67 steps (28%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:33 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4833_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 32
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4833_highfrq.txt
+    wildcards: code=4833
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:33 2022]
+Finished job 36.
+20 of 67 steps (30%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:33 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4847_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 53
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4847_highfrq.txt
+    wildcards: code=4847
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:34 2022]
+Finished job 18.
+21 of 67 steps (31%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:34 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4839_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 41
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4839_highfrq.txt
+    wildcards: code=4839
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:34 2022]
+Finished job 21.
+22 of 67 steps (33%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:34 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4829_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 26
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4829_highfrq.txt
+    wildcards: code=4829
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:35 2022]
+Finished job 60.
+23 of 67 steps (34%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:35 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4851_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 59
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4851_highfrq.txt
+    wildcards: code=4851
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:35 2022]
+Finished job 15.
+24 of 67 steps (36%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:35 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4821_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 14
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4821_highfrq.txt
+    wildcards: code=4821
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:36 2022]
+Finished job 51.
+25 of 67 steps (37%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:36 2022]
+rule LD_clumping:
+    input: data/sib_gwas/filtered/ieu-b-4843_highfrq.txt, /project2/jjberg/hkim/filter_sibgwas_LDclumping.pl
+    output: data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped.txt, data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed.txt, data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed_rsID.txt
+    jobid: 47
+    reason: Missing output files: data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed_rsID.txt; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4843_highfrq.txt
+    wildcards: code=4843
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:53 2022]
+Finished job 8.
+26 of 67 steps (39%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:53 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4817/ieu-b-4817_1kg_dosage.bed
+    jobid: 7
+    reason: Missing output files: data/1kg_prs/b-4817/ieu-b-4817_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4817_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4817
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:54 2022]
+Finished job 32.
+27 of 67 steps (40%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:54 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4833/ieu-b-4833_1kg_dosage.bed
+    jobid: 31
+    reason: Missing output files: data/1kg_prs/b-4833/ieu-b-4833_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4833
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:55 2022]
+Finished job 53.
+28 of 67 steps (42%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:55 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage.bed
+    jobid: 52
+    reason: Missing output files: data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4847_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4847
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:55 2022]
+Finished job 41.
+29 of 67 steps (43%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:55 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4839/ieu-b-4839_1kg_dosage.bed
+    jobid: 40
+    reason: Missing output files: data/1kg_prs/b-4839/ieu-b-4839_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4839_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4839
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:55 2022]
+Finished job 26.
+30 of 67 steps (45%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:55 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.bed
+    jobid: 25
+    reason: Missing output files: data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4829_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4829
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:56 2022]
+Finished job 59.
+31 of 67 steps (46%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:56 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4851/ieu-b-4851_1kg_dosage.bed
+    jobid: 58
+    reason: Missing output files: data/1kg_prs/b-4851/ieu-b-4851_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4851_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4851
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:57 2022]
+Finished job 14.
+32 of 67 steps (48%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:57 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage.bed
+    jobid: 13
+    reason: Missing output files: data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4821_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4821
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:43:58 2022]
+Finished job 47.
+33 of 67 steps (49%) done
+Select jobs to execute...
+
+[Wed Jul 13 15:43:58 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4843/ieu-b-4843_1kg_dosage.bed
+    jobid: 46
+    reason: Missing output files: data/1kg_prs/b-4843/ieu-b-4843_1kg_dosage.bed; Input files updated by another job: data/sib_gwas/filtered/ieu-b-4843_highfrq_LDclumped_transformed_rsID.txt
+    wildcards: code=4843
+    resources: tmpdir=/tmp/jobs/21578373
+
+[Wed Jul 13 15:44:18 2022]
+Error in rule filter_1kg_seqdata:
+    jobid: 70
+    output: data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage.bed
+    shell:
+        
+    	plink --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms --extract data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt --make-bed --out data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Jul 13 15:44:21 2022]
+Error in rule filter_1kg_seqdata:
+    jobid: 22
+    output: data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.bed
+    shell:
+        
+    	plink --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms --extract data/sib_gwas/filtered/ieu-b-4827_highfrq_LDclumped_transformed_rsID.txt --make-bed --out data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Jul 13 15:44:27 2022]
+Finished job 67.
+34 of 67 steps (51%) done
+[Wed Jul 13 15:44:50 2022]
+Finished job 31.
+35 of 67 steps (52%) done
+[Wed Jul 13 15:44:50 2022]
+Finished job 25.
+36 of 67 steps (54%) done
+[Wed Jul 13 15:44:50 2022]
+Finished job 7.
+37 of 67 steps (55%) done
+[Wed Jul 13 15:44:50 2022]
+Finished job 46.
+38 of 67 steps (57%) done
+[Wed Jul 13 15:44:50 2022]
+Finished job 40.
+39 of 67 steps (58%) done
+[Wed Jul 13 15:44:50 2022]
+Finished job 52.
+40 of 67 steps (60%) done
+[Wed Jul 13 15:44:50 2022]
+Finished job 13.
+41 of 67 steps (61%) done
+[Wed Jul 13 15:44:51 2022]
+Finished job 58.
+42 of 67 steps (63%) done

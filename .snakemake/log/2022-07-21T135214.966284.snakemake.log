@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 14
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+filter_1kg_seqdata        1              1              1
+total                     2              1              1
+
+Select jobs to execute...
+
+[Thu Jul 21 13:52:15 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage.bed
+    jobid: 61
+    reason: Missing output files: data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage.bed
+    wildcards: code=4853
+    resources: tmpdir=/tmp/jobs/21733551
+
+[Thu Jul 21 13:53:38 2022]
+Finished job 61.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Thu Jul 21 13:53:38 2022]
+localrule all:
+    input: data/1kg_prs/b-4813/ieu-b-4813_1kg_dosage.bed, data/1kg_prs/b-4815/ieu-b-4815_1kg_dosage.bed, data/1kg_prs/b-4817/ieu-b-4817_1kg_dosage.bed, data/1kg_prs/b-4819/ieu-b-4819_1kg_dosage.bed, data/1kg_prs/b-4821/ieu-b-4821_1kg_dosage.bed, data/1kg_prs/b-4823/ieu-b-4823_1kg_dosage.bed, data/1kg_prs/b-4825/ieu-b-4825_1kg_dosage.bed, data/1kg_prs/b-4827/ieu-b-4827_1kg_dosage.bed, data/1kg_prs/b-4829/ieu-b-4829_1kg_dosage.bed, data/1kg_prs/b-4831/ieu-b-4831_1kg_dosage.bed, data/1kg_prs/b-4833/ieu-b-4833_1kg_dosage.bed, data/1kg_prs/b-4835/ieu-b-4835_1kg_dosage.bed, data/1kg_prs/b-4837/ieu-b-4837_1kg_dosage.bed, data/1kg_prs/b-4839/ieu-b-4839_1kg_dosage.bed, data/1kg_prs/b-4841/ieu-b-4841_1kg_dosage.bed, data/1kg_prs/b-4843/ieu-b-4843_1kg_dosage.bed, data/1kg_prs/b-4845/ieu-b-4845_1kg_dosage.bed, data/1kg_prs/b-4847/ieu-b-4847_1kg_dosage.bed, data/1kg_prs/b-4849/ieu-b-4849_1kg_dosage.bed, data/1kg_prs/b-4851/ieu-b-4851_1kg_dosage.bed, data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage.bed, data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage.bed, data/1kg_prs/b-4857/ieu-b-4857_1kg_dosage.bed, data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage.bed
+    jobid: 0
+    reason: Input files updated by another job: data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage.bed
+    resources: tmpdir=/tmp/jobs/21733551
+
+[Thu Jul 21 13:53:38 2022]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2022-07-21T135214.966284.snakemake.log

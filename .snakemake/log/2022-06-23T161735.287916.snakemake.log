@@ -1,0 +1,305 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 14
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+all                  1              1              1
+compute_freqs       21              1              1
+total               22              1              1
+
+Select jobs to execute...
+
+[Thu Jun 23 16:17:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr6.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr6_high_frq.txt
+    jobid: 6
+    reason: Missing output files: data/1kg_frq/1kg_chr6_high_frq.txt
+    wildcards: chr=6
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr11.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr11_high_frq.txt
+    jobid: 11
+    reason: Missing output files: data/1kg_frq/1kg_chr11_high_frq.txt
+    wildcards: chr=11
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr8.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr8_high_frq.txt
+    jobid: 8
+    reason: Missing output files: data/1kg_frq/1kg_chr8_high_frq.txt
+    wildcards: chr=8
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr2.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr2_high_frq.txt
+    jobid: 2
+    reason: Missing output files: data/1kg_frq/1kg_chr2_high_frq.txt
+    wildcards: chr=2
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr13.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr13_high_frq.txt
+    jobid: 13
+    reason: Missing output files: data/1kg_frq/1kg_chr13_high_frq.txt
+    wildcards: chr=13
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr10.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr10_high_frq.txt
+    jobid: 10
+    reason: Missing output files: data/1kg_frq/1kg_chr10_high_frq.txt
+    wildcards: chr=10
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr18.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr18_high_frq.txt
+    jobid: 18
+    reason: Missing output files: data/1kg_frq/1kg_chr18_high_frq.txt
+    wildcards: chr=18
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr5.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr5_high_frq.txt
+    jobid: 5
+    reason: Missing output files: data/1kg_frq/1kg_chr5_high_frq.txt
+    wildcards: chr=5
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:42 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr7.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr7_high_frq.txt
+    jobid: 7
+    reason: Missing output files: data/1kg_frq/1kg_chr7_high_frq.txt
+    wildcards: chr=7
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:44 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr12.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr12_high_frq.txt
+    jobid: 12
+    reason: Missing output files: data/1kg_frq/1kg_chr12_high_frq.txt
+    wildcards: chr=12
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:44 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr9.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr9_high_frq.txt
+    jobid: 9
+    reason: Missing output files: data/1kg_frq/1kg_chr9_high_frq.txt
+    wildcards: chr=9
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:44 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr16.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr16_high_frq.txt
+    jobid: 16
+    reason: Missing output files: data/1kg_frq/1kg_chr16_high_frq.txt
+    wildcards: chr=16
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:44 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr4.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr4_high_frq.txt
+    jobid: 4
+    reason: Missing output files: data/1kg_frq/1kg_chr4_high_frq.txt
+    wildcards: chr=4
+    resources: tmpdir=/tmp/jobs/21161810
+
+
+[Thu Jun 23 16:17:44 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr3.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr3_high_frq.txt
+    jobid: 3
+    reason: Missing output files: data/1kg_frq/1kg_chr3_high_frq.txt
+    wildcards: chr=3
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:20:47 2022]
+Finished job 18.
+1 of 22 steps (5%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:20:47 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr15.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr15_high_frq.txt
+    jobid: 15
+    reason: Missing output files: data/1kg_frq/1kg_chr15_high_frq.txt
+    wildcards: chr=15
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:21:31 2022]
+Finished job 16.
+2 of 22 steps (9%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:21:31 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr14.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr14_high_frq.txt
+    jobid: 14
+    reason: Missing output files: data/1kg_frq/1kg_chr14_high_frq.txt
+    wildcards: chr=14
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:22:21 2022]
+Finished job 13.
+3 of 22 steps (14%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:22:21 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr17.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr17_high_frq.txt
+    jobid: 17
+    reason: Missing output files: data/1kg_frq/1kg_chr17_high_frq.txt
+    wildcards: chr=17
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:23:39 2022]
+Finished job 9.
+4 of 22 steps (18%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:23:39 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr20.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr20_high_frq.txt
+    jobid: 20
+    reason: Missing output files: data/1kg_frq/1kg_chr20_high_frq.txt
+    wildcards: chr=20
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:23:55 2022]
+Finished job 12.
+5 of 22 steps (23%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:23:55 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr19.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr19_high_frq.txt
+    jobid: 19
+    reason: Missing output files: data/1kg_frq/1kg_chr19_high_frq.txt
+    wildcards: chr=19
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:23:58 2022]
+Finished job 10.
+6 of 22 steps (27%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:23:58 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr22.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr22_high_frq.txt
+    jobid: 22
+    reason: Missing output files: data/1kg_frq/1kg_chr22_high_frq.txt; Code has changed since last execution
+    wildcards: chr=22
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:24:22 2022]
+Finished job 11.
+7 of 22 steps (32%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:24:22 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr21.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr21_high_frq.txt
+    jobid: 21
+    reason: Missing output files: data/1kg_frq/1kg_chr21_high_frq.txt
+    wildcards: chr=21
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:25:35 2022]
+Finished job 8.
+8 of 22 steps (36%) done
+[Thu Jun 23 16:25:39 2022]
+Finished job 7.
+9 of 22 steps (41%) done
+[Thu Jun 23 16:26:02 2022]
+Finished job 6.
+10 of 22 steps (45%) done
+[Thu Jun 23 16:26:56 2022]
+Finished job 15.
+11 of 22 steps (50%) done
+[Thu Jun 23 16:27:19 2022]
+Finished job 22.
+12 of 22 steps (55%) done
+[Thu Jun 23 16:27:21 2022]
+Finished job 21.
+13 of 22 steps (59%) done
+[Thu Jun 23 16:27:38 2022]
+Finished job 5.
+14 of 22 steps (64%) done
+[Thu Jun 23 16:28:03 2022]
+Finished job 14.
+15 of 22 steps (68%) done
+[Thu Jun 23 16:28:07 2022]
+Finished job 17.
+16 of 22 steps (73%) done
+[Thu Jun 23 16:28:34 2022]
+Finished job 19.
+17 of 22 steps (77%) done
+[Thu Jun 23 16:28:34 2022]
+Finished job 4.
+18 of 22 steps (82%) done
+[Thu Jun 23 16:28:49 2022]
+Finished job 3.
+19 of 22 steps (86%) done
+[Thu Jun 23 16:28:59 2022]
+Finished job 20.
+20 of 22 steps (91%) done
+[Thu Jun 23 16:30:42 2022]
+Finished job 2.
+21 of 22 steps (95%) done
+Select jobs to execute...
+
+[Thu Jun 23 16:30:42 2022]
+localrule all:
+    input: data/1kg_frq/1kg_chr1_high_frq.txt, data/1kg_frq/1kg_chr2_high_frq.txt, data/1kg_frq/1kg_chr3_high_frq.txt, data/1kg_frq/1kg_chr4_high_frq.txt, data/1kg_frq/1kg_chr5_high_frq.txt, data/1kg_frq/1kg_chr6_high_frq.txt, data/1kg_frq/1kg_chr7_high_frq.txt, data/1kg_frq/1kg_chr8_high_frq.txt, data/1kg_frq/1kg_chr9_high_frq.txt, data/1kg_frq/1kg_chr10_high_frq.txt, data/1kg_frq/1kg_chr11_high_frq.txt, data/1kg_frq/1kg_chr12_high_frq.txt, data/1kg_frq/1kg_chr13_high_frq.txt, data/1kg_frq/1kg_chr14_high_frq.txt, data/1kg_frq/1kg_chr15_high_frq.txt, data/1kg_frq/1kg_chr16_high_frq.txt, data/1kg_frq/1kg_chr17_high_frq.txt, data/1kg_frq/1kg_chr18_high_frq.txt, data/1kg_frq/1kg_chr19_high_frq.txt, data/1kg_frq/1kg_chr20_high_frq.txt, data/1kg_frq/1kg_chr21_high_frq.txt, data/1kg_frq/1kg_chr22_high_frq.txt
+    jobid: 0
+    reason: Input files updated by another job: data/1kg_frq/1kg_chr20_high_frq.txt, data/1kg_frq/1kg_chr19_high_frq.txt, data/1kg_frq/1kg_chr7_high_frq.txt, data/1kg_frq/1kg_chr10_high_frq.txt, data/1kg_frq/1kg_chr9_high_frq.txt, data/1kg_frq/1kg_chr14_high_frq.txt, data/1kg_frq/1kg_chr2_high_frq.txt, data/1kg_frq/1kg_chr21_high_frq.txt, data/1kg_frq/1kg_chr11_high_frq.txt, data/1kg_frq/1kg_chr16_high_frq.txt, data/1kg_frq/1kg_chr5_high_frq.txt, data/1kg_frq/1kg_chr22_high_frq.txt, data/1kg_frq/1kg_chr8_high_frq.txt, data/1kg_frq/1kg_chr3_high_frq.txt, data/1kg_frq/1kg_chr6_high_frq.txt, data/1kg_frq/1kg_chr12_high_frq.txt, data/1kg_frq/1kg_chr4_high_frq.txt, data/1kg_frq/1kg_chr13_high_frq.txt, data/1kg_frq/1kg_chr17_high_frq.txt, data/1kg_frq/1kg_chr15_high_frq.txt, data/1kg_frq/1kg_chr18_high_frq.txt
+    resources: tmpdir=/tmp/jobs/21161810
+
+[Thu Jun 23 16:30:42 2022]
+Finished job 0.
+22 of 22 steps (100%) done
+Complete log: .snakemake/log/2022-06-23T161735.287916.snakemake.log

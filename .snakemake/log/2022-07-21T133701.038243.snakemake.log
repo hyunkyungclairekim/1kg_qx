@@ -1,0 +1,102 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 14
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+filter_1kg_seqdata        6              1              1
+total                     7              1              1
+
+Select jobs to execute...
+
+[Thu Jul 21 13:37:02 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4831_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4831/ieu-b-4831_1kg_dosage.bed
+    jobid: 28
+    reason: Missing output files: data/1kg_prs/b-4831/ieu-b-4831_1kg_dosage.bed
+    wildcards: code=4831
+    resources: tmpdir=/tmp/jobs/21733493
+
+
+[Thu Jul 21 13:37:02 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4859_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage.bed
+    jobid: 70
+    reason: Missing output files: data/1kg_prs/b-4859/ieu-b-4859_1kg_dosage.bed
+    wildcards: code=4859
+    resources: tmpdir=/tmp/jobs/21733493
+
+
+[Thu Jul 21 13:37:02 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4849_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4849/ieu-b-4849_1kg_dosage.bed
+    jobid: 55
+    reason: Missing output files: data/1kg_prs/b-4849/ieu-b-4849_1kg_dosage.bed
+    wildcards: code=4849
+    resources: tmpdir=/tmp/jobs/21733493
+
+
+[Thu Jul 21 13:37:02 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4855_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage.bed
+    jobid: 64
+    reason: Missing output files: data/1kg_prs/b-4855/ieu-b-4855_1kg_dosage.bed
+    wildcards: code=4855
+    resources: tmpdir=/tmp/jobs/21733493
+
+
+[Thu Jul 21 13:37:02 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4833_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4833/ieu-b-4833_1kg_dosage.bed
+    jobid: 31
+    reason: Missing output files: data/1kg_prs/b-4833/ieu-b-4833_1kg_dosage.bed
+    wildcards: code=4833
+    resources: tmpdir=/tmp/jobs/21733493
+
+
+[Thu Jul 21 13:37:02 2022]
+rule filter_1kg_seqdata:
+    input: /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms.bed, data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt
+    output: data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage.bed
+    jobid: 61
+    reason: Missing output files: data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage.bed
+    wildcards: code=4853
+    resources: tmpdir=/tmp/jobs/21733493
+
+[Thu Jul 21 13:38:04 2022]
+Finished job 70.
+1 of 7 steps (14%) done
+[Thu Jul 21 13:38:04 2022]
+Finished job 28.
+2 of 7 steps (29%) done
+[Thu Jul 21 13:38:05 2022]
+Finished job 31.
+3 of 7 steps (43%) done
+[Thu Jul 21 13:38:38 2022]
+Finished job 55.
+4 of 7 steps (57%) done
+[Thu Jul 21 13:38:45 2022]
+Finished job 64.
+5 of 7 steps (71%) done
+[Thu Jul 21 13:38:55 2022]
+Error in rule filter_1kg_seqdata:
+    jobid: 61
+    output: data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage.bed
+    shell:
+        
+    	plink --bfile /project2/jjberg/data/1kg/plink-files/files/EUR/all_chroms --extract data/sib_gwas/filtered/ieu-b-4853_highfrq_LDclumped_transformed_rsID.txt --make-bed --out data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job filter_1kg_seqdata since they might be corrupted:
+data/1kg_prs/b-4853/ieu-b-4853_1kg_dosage.bed
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2022-07-21T133701.038243.snakemake.log

@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+compute_freqs        1              1              1
+total                1              1              1
+
+
+[Thu Jun 23 15:50:22 2022]
+rule compute_freqs:
+    input: /project2/jnovembre/data/external_public/1kg_phase3/high_coverage/new_1kg_nygc_chr22.biallelic_snps.vcf.gz, /project2/jjberg/hkim/igsr_samples_EUR_id_dup.txt
+    output: data/1kg_frq/1kg_chr22_high_frq.txt
+    jobid: 0
+    reason: Missing output files: data/1kg_frq/1kg_chr22_high_frq.txt
+    wildcards: chr=22
+    resources: tmpdir=/tmp
+
+RuleException in line 1 of /project2/jjberg/hkim/1kg_qx/snakefile:
+NameError: The name 'chr' is unknown in this context. Did you mean 'wildcards.chr'?
